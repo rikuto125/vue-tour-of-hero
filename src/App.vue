@@ -1,15 +1,21 @@
 <template>
-  <Heroes></Heroes>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/heroes">Heroes</router-link>
+    </div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
 
-import Heroes from "@/components/pages/Heroes";
-
 export default {
-  name: 'App',
-  components: {
-    Heroes,
+  name: 'app',
+  data: function() {
+    return {
+      title: 'Tour of Heroes',
+    }
   }
 }
 </script>

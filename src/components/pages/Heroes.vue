@@ -1,19 +1,23 @@
 <template>
   <div>
-    <ul class="heroes">
-      <li v-for="hero in heroes"
-          :key="hero.id">
-        <div class="link-group">
-            <span class="badge">{{hero.id}}</span>
-            {{hero.name}}
+      <ul class="heroes">
+        <li v-for="hero in heroes"
+            :key="hero.id">
+          <div class="link-group">
+            <div class="link" v-on:click="select(hero)">
+              <span class="badge">{{hero.id}}</span>
+              {{hero.name}}
+            </div>
           </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
   </div>
 </template>
 
 <script>
 import store from '../../store/store'
+import router from "@/router";
+
 export default {
   //eslint-disable-next-line
   name: "Heroes",
@@ -22,6 +26,12 @@ export default {
       heroes: store.state.heroes
     }
   },
+  methods: {
+    select: function(hero) {
+      //heroDetailに遷移する
+      router.push({ name: 'HeroDetail', params: { id: hero.id } })
+    }
+  }
 }
 </script>
 
