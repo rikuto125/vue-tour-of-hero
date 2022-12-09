@@ -1,6 +1,6 @@
 # tour-of-hero
 
-## 2_HeroDetailにgoBackとsave機能追加とstyle適応
+## 2_1_HeroDetailにgoBackとsave機能追加とstyle適応
 ```
 HeroDetailのdataのfunctionで書いていた処理をstateのgetHeroで実装
 今後データのやりとりのロジックはstoreで書くこと
