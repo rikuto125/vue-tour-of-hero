@@ -1,12 +1,12 @@
 # tour-of-hero
 
-## 2_ユーザがヒーロを選択しクリックして詳細を見れる実装
+## 2_HeroDetailにgoBackとsave機能追加とstyle適応
 ```
-ページ遷移はvue-routerを使う
-vue3の場合の資料を参照　→　vue-router　vue3　使い方で検索
+HeroDetailのdataのfunctionで書いていた処理をstateのgetHeroで実装
+今後データのやりとりのロジックはstoreで書くこと
+HeroDetailにgoBackとsave機能追加とstyle適応
+saveなどのデータのロジックはstateにかく
 
-実際に使うときはroutingの設定をして以下のように使う
-<router-link to="/heroes">Heroes</router-link>
 
 ```
 
