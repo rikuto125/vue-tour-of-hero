@@ -1,12 +1,9 @@
 # tour-of-hero
-
 ##  4_0_Dashboard作成
 ```
 home画面として、ダッシュボードを作成する。
 Top Heroesというタイトルの下に、ヒーローのリストを表示する。
-
 ```
-
 
 ## Project setup
 ```
