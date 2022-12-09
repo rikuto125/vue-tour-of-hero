@@ -1,22 +1,22 @@
 <template>
   <div>
-    <ul class="heroes">
-      <li v-for="hero in heroes"
-          :key="hero.id">
-        <div class="link-group">
-          <div class="link" v-on:click="select(hero)">
-            <span class="badge">{{hero.id}}</span>
-            {{hero.name}}
+      <ul class="heroes">
+        <li v-for="hero in heroes"
+            :key="hero.id">
+          <div class="link-group">
+            <div class="link" v-on:click="select(hero)">
+              <span class="badge">{{hero.id}}</span>
+              {{hero.name}}
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
   </div>
 </template>
 
 <script>
 import store from '../../store/store'
-import router from '../../store/store'
+import router from "@/router";
 
 export default {
   //eslint-disable-next-line
@@ -28,7 +28,8 @@ export default {
   },
   methods: {
     select: function(hero) {
-      this.$router.push({ name: "Detail", params: { id: hero.id } })
+      //heroDetailに遷移する
+      router.push({ name: 'HeroDetail', params: { id: hero.id } })
     }
   }
 }
