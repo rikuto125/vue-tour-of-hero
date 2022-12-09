@@ -29,5 +29,23 @@ export default {
         //item.id === hero.idでtrueならhero.nameを代入、falseならitem.nameを代入
         //ここの処理を書き換えると
         //this.state.heroes = this.state.heroes.map(item => item.id === hero.id ? hero : item)
-    }
+    },
+
+    addHero: function (name){
+        const maxId = this.genId(this.state.heroes)
+        this.state.messages.push(`added hero w/ id=${maxId}`)
+        this.state.heroes.push({id: maxId, name: name})
+    },
+
+    genId: function (heroes) {
+        return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11
+    },
+
+    delete: function (hero) {
+        this.state.heroes =
+            this.state.heroes.filter(item => item.id !== hero.id)
+        //filter関数とは、配列の中から条件に合うものだけを抽出する関数
+        return this.state.heroes
+    },
+
 }
