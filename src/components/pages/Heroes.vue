@@ -1,5 +1,12 @@
 <template>
   <div>
+    <h2>My Heroes</h2>
+    <div>
+      <label>Hero name:
+        <input v-model="heroName" placeholder="name">
+      </label>
+      <button v-on:click="add(heroName)">add</button>
+    </div>
       <ul class="heroes">
         <li v-for="hero in heroes"
             :key="hero.id">
@@ -8,6 +15,8 @@
               <span class="badge">{{hero.id}}</span>
               {{hero.name}}
             </div>
+            <button class="delete"
+                    v-on:click="deleteHero(hero)">×</button>
           </div>
         </li>
       </ul>
@@ -23,13 +32,23 @@ export default {
   name: "Heroes",
   data: function() {
     return {
-      heroes: store.state.heroes
+      heroes: store.state.heroes,
+      heroName: undefined
     }
   },
   methods: {
     select: function(hero) {
       //heroDetailに遷移する
       router.push({ name: 'HeroDetail', params: { id: hero.id } })
+    },
+    add:function (name){
+      name = name.trim();//trimとは
+      if (!name) { return }
+      store.addHero(name)
+      this.heroName = ''
+    },
+    deleteHero: function (hero) {
+      this.heroes = store.delete(hero)
     }
   }
 }
