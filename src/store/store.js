@@ -48,4 +48,8 @@ export default {
         return this.state.heroes
     },
 
+    getHeroes: function () {
+        this.state.messages.push('HeroService: fetched heroes')
+        return this.state.heroes
+    },
 }
