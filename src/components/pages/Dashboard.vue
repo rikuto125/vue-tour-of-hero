@@ -11,15 +11,19 @@
             </div>
         </router-link>
     </div>
+    <HeroSearch />
 </div>
 </template>
 
 <script>
 import store from '../../store/store'
-//import router from "@/router";
+import HeroSearch from "@/components/pages/HeroSearch";
 export default {
     // eslint-disable-next-line
     name: 'Dashboard',
+    components: {
+        HeroSearch
+    },
     data: function() {
         this.getHeroes()
         return {

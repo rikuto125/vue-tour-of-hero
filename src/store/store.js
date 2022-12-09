@@ -52,4 +52,13 @@ export default {
         this.state.messages.push('HeroService: fetched heroes')
         return this.state.heroes
     },
+
+    search: function (name) {
+        if (name === ''){return}
+        return this.state.heroes.filter(h => h.name.indexOf(name) != -1)
+        //indexOfは、配列の中から引数に指定した値があるかどうかを調べる関数
+        //引数に指定した値があれば、その値のインデックス番号を返す
+        //なければ-1を返す
+        //{}の中の条件がtrueならその要素を返す→{return}がないとundefinedが返る
+    }
 }
