@@ -14,4 +14,9 @@ export default {
         ],
         messages: []
     },
+    getHero: function (id) {
+        this.state.messages.push(`HeroService: fetched hero id=${id}`)
+        return this.state.heroes
+            .find((hero) => hero.id === id)
+    },
 }
