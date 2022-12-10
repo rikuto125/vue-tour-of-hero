@@ -2,7 +2,6 @@
 <div id="search-component">
     <h4>Hero Search</h4>
     <input id="search-box" v-model="searchName" placeholder="name">
-
     <ul class="search-result">
         <router-link
             v-for="hero in heroes"

@@ -3,9 +3,12 @@
 Rewriting Angular's Tour of Heroes to Vue3
 ```
 
-##  5_0_Search機能作成
+##  6_0_Dashboardをatomic_designで作成
 ```
-名前の検索機能を追加
+atom molecules organisms template pagesを作成
+ページの構成上atom，organisms．pagesで構成
+```
+
 
 ```
 

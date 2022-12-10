@@ -15,6 +15,10 @@
 </div>
 </template>
 
+<!--v-bindとは、Vue.jsのデータバインディングの機能の一つ。-->
+<!--データバインディングとは、データとDOM要素を結びつけること。-->
+<!--styleになる@mediaとは、画面サイズによって表示を変えるときに使う-->
+
 <script>
 import store from '../../store/store'
 import HeroSearch from "@/components/pages/HeroSearch";
@@ -92,6 +96,7 @@ h4 {
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
 }
+
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
