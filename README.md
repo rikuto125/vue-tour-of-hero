@@ -9,9 +9,6 @@ atom molecules organisms template pagesを作成
 ページの構成上atom，organisms．pagesで構成
 ```
 
-
-```
-
 ## Project setup
 ```
 yarn install
